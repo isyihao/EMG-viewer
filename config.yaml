@@ -1,0 +1,19 @@
+emg:
+  # 数据长度限制,画布最大2^16=65535个像素
+  limit-len: 57600
+  # 可视化结果pdf保存路径
+  save-path: './pdf'
+  # emg数据配置
+  emg:
+    # 颜色
+    color: '#265580'
+    # 线宽
+    width: 1
+  # pred1数据配置
+  pred1:
+    color: '#265580'
+    width: 1
+  # pred2数据配置
+  pred2:
+    color: '#265580'
+    width: 1
