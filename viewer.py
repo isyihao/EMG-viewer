@@ -12,7 +12,7 @@ with open('./config.yaml', encoding='utf-8') as fs:
     config = yaml.load(fs, Loader=yaml.FullLoader)
 
 
-def config_plate(plt, total_len, emg):
+def config_plate(plt, total_len):
     plt.xticks([])
 
     # y轴标签 0.1一个刻度
@@ -83,7 +83,7 @@ def generate_emg(emg: EMG):
     plt.axis([0, total_len, -1, 1])
 
     # 配置面板
-    config_plate(plt, total_len, emg)
+    config_plate(plt, total_len)
 
     # 绘制emg数据
     x = list(range(total_len))
@@ -98,7 +98,7 @@ def generate_emg(emg: EMG):
     # 坐标轴范围
     plt.axis([0, total_len, -1, 1])
     # 配置面板
-    config_plate(plt, total_len, emg)
+    config_plate(plt, total_len)
     # 绘制pred1数据
     x = list(range(total_len))
     plt.plot(x, emg.pred1,
@@ -112,7 +112,7 @@ def generate_emg(emg: EMG):
     # 坐标轴范围
     plt.axis([0, total_len, -1, 1])
     # 配置面板
-    config_plate(plt, total_len, emg)
+    config_plate(plt, total_len)
     # 绘制pred2数据
     x = list(range(total_len))
     plt.plot(x, emg.pred2,
